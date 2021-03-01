@@ -6,7 +6,7 @@ require 'inspec-plugin-aci/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'inspec-plugin-aci'
-  spec.version       = Example::VERSION
+  spec.version       = Aci::VERSION
   spec.authors       = ['Matyas Prokop']
   spec.email         = ['matyas@natilik.com']
   spec.summary       = 'InSpec Plugin ACI'
