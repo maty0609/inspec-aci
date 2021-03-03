@@ -12,4 +12,14 @@
 libdir = File.dirname(__FILE__)
 $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 
-require_relative 'inspec-plugin-aci/plugin'
+lib = File.expand_path('/usr/local/rvm/gems/ruby-2.7.2/gems/acirb-1.2.1.0/lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+lib = File.expand_path('/usr/local/rvm/gems/ruby-2.7.2/gems/nokogiri-1.11.1-x86_64-linux/lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+lib = File.expand_path('/usr/local/rvm/gems/ruby-2.7.2/gems/websocket-1.2.9/lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+
+require_relative 'inspec-aci/plugin'
