@@ -11,8 +11,8 @@ module InspecPlugins::ACI
 
    def fetch(profile_name, input_name)
      apicuri = 'https://10.2.19.77/'
-     username = 'admin'
-     password = 'Natilik123!'
+     username = 'test'
+     password = 'test'
 
      rest = ACIrb::RestClient.new(url: apicuri, user: username,
                                       password: password)
