@@ -21,5 +21,4 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 lib = File.expand_path('/usr/local/rvm/gems/ruby-2.7.2/gems/websocket-1.2.9/lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-
 require_relative 'inspec-aci/plugin'

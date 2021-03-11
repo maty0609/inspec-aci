@@ -12,13 +12,15 @@ require 'inspec-aci/version'
 # The 'Inspec' capitalization is used throughout the InSpec source code; yes, it's
 # strange.
 
-module InspecPlugins::ACI
-  class Plugin < Inspec.plugin(2)
-    plugin_name :'inspec-aci'
+module InspecPlugins
+  module ACI
+    class Plugin < Inspec.plugin(2)
+      plugin_name :'inspec-aci'
 
-    input :input do
-      require_relative 'input'
-      InspecPlugins::ACI::Contract
+      input :contract do
+        require_relative 'input'
+        InspecPlugins::ACI::Contract
+      end
     end
-  end
+ end
 end
