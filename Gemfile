@@ -13,3 +13,7 @@ group :tools do
   gem "github_changelog_generator"
   gem "rb-readline"
 end
+
+group :inspec do
+  gem "inspec-bin", "~> 4.7"
+end
