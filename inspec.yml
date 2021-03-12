@@ -4,8 +4,5 @@ maintainer: Matyas Prokop
 copyright: Matyas Prokop
 copyright_email: mprokop@natilik.com
 license: Apache-2.0
-summary: This resource pack provides compliance resources for Habitat.
-version: 1.0.14
+summary: This resource pack provides compliance resources for Cisco ACI.
 inspec_version: '>= 4.7.3'
-supports:
-  - platform: acirb
