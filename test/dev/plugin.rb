@@ -6,21 +6,12 @@
 # Your plugin's functionality may never be used on this InSpec run; so we keep things
 # fast and light by only loading heavy things when they are needed.
 
-require 'inspec/plugin/v2'
-require 'inspec-aci/version'
-# The InspecPlugins namespace is where all plugins should declare themselves.
-# The 'Inspec' capitalization is used throughout the InSpec source code; yes, it's
-# strange.
+require 'version'
 
 module InspecPlugins
   module ACI
     class Plugin < ::Inspec.plugin(2)
       plugin_name :'inspec-aci'
-
-      aci_contract :aci_contract do
-        require 'inspec-aci/aci_contract'
-        InspecPlugins::ACI::Contract
-      end
     end
  end
 end
