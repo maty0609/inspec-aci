@@ -14,9 +14,9 @@ class AciContract < Inspec.resource(1)
 
   def initialize(params)
     @name   = params[:name]
-    apicuri = 'https://10.2.19.77/'
-    username = 'admin'
-    password = 'Natilik123!'
+    apicuri = 'url'
+    username = 'user'
+    password = 'password'
     rest = ACIrb::RestClient.new(url: apicuri, user: username,
                                      password: password)
     contract = rest.lookupByDn('uni/tn-tf-test-client/brc-aci_contract-1-prod/'+name,
