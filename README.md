@@ -29,8 +29,7 @@ end
 ## APIC Credentials
 APIC URL, username and password are configured as environmental variables which are used by InSpec Cisco ACI Resources.
 
-Please set up following variables:
-
+### Environment Variables
 ```
 export ACI_PASSWORD=test
 export ACI_USERNAME=test
@@ -41,6 +40,9 @@ export ACI_URL=https://10.10.10.10/
 * https://docs.chef.io/inspec/
 * https://github.com/inspec/inspec
 * https://github.com/datacenter/acirb
+
+
+- [aci_subject](docs/resources/aci_subject.md)
 
 
 ## Contributing
