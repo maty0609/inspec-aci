@@ -9,6 +9,8 @@
 # This is not needed when being loaded as a gem; but when doing
 # plugin development, you may need it.  Either way, it's harmless.
 
+
+
 libdir = File.dirname(__FILE__)
 $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 
@@ -21,6 +23,6 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 lib = File.expand_path('/usr/local/rvm/gems/ruby-2.7.2/gems/websocket-1.2.9/lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-
-require_relative '../../libraries/aci_contract.rb'
 require_relative 'plugin.rb'
+require_relative '../../libraries/aci_contract.rb'
+require_relative '../../libraries/aci_subject.rb'
