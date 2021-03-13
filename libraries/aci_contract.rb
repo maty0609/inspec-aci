@@ -14,14 +14,13 @@ class AciContract < Inspec.resource(1)
 
   def initialize(params)
     @name   = params[:name]
-    apicuri = 'url'
-    username = 'user'
-    password = 'password'
-    rest = ACIrb::RestClient.new(url: apicuri, user: username,
+    url =  ENV['ACI_URL']
+    username = ENV['ACI_USERNAME']
+    password = ENV['ACI_PASSWORD']
+    rest = ACIrb::RestClient.new(url: url, user: username,
                                      password: password)
     contract = rest.lookupByDn('uni/tn-tf-test-client/brc-aci_contract-1-prod/'+name,
                              subtree: 'full')
-    puts contract
     case contract.revFltPorts
      when 'yes'
        @stateful=true
