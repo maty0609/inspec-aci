@@ -14,7 +14,8 @@ This project is still at the beginning. This resource pack is in the early stage
 ## Prerequisites
 
 * InSpec v4.7.3 or later
-* A running Cisco APIC, which you can access via the HTTP API
+* ACIrb - Ruby implementation of the Cisco APIC REST API
+* Cisco ACI v3.0 or later
 
 ## Examples
 
@@ -25,7 +26,21 @@ describe aci_contract(name:'subj-tf-contract-subject-prod') do
 end
 ```
 
+## APIC Credentials
+APIC URL, username and password are configured as environmental variables which are used by InSpec Cisco ACI Resources.
+
+Please set up following variables:
+
+```
+export ACI_PASSWORD=test
+export ACI_USERNAME=test
+export ACI_URL=https://10.10.10.10/
+```
+
 ## Resource Documentation
+* https://docs.chef.io/inspec/
+* https://github.com/inspec/inspec
+* https://github.com/datacenter/acirb
 
 
 ## Contributing
