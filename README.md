@@ -42,7 +42,8 @@ export ACI_URL=https://10.10.10.10/
 * https://github.com/datacenter/acirb
 
 
-- [aci_subject](docs/resources/aci_subject.md)
+- [aci_subject](doc/resources/aci_subject.md)
+- [aci_application_epg](doc/resources/aci_application_epg.md)
 
 
 ## Contributing
