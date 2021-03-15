@@ -32,7 +32,6 @@ class AciApplicationEpg < Inspec.resource(1)
     @password = ENV['ACI_PASSWORD']
     @aci = ACIrb::RestClient.new(url: url, user: username,password: password)
     @response = aci.lookupByDn('uni/tn-'+tenant+'/ap-'+profile+'/epg-'+name, subtree: 'full')
-    puts response
     @table = fetch_data
   end
 
