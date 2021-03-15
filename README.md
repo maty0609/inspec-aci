@@ -15,7 +15,7 @@ This project is still at the beginning. This resource pack is in the early stage
 
 * InSpec v4.7.3 or later
 * ACIrb - Ruby implementation of the Cisco APIC REST API
-* Cisco ACI v3.0 or later
+* Cisco ACI v3.1 or later
 
 ## Examples
 
