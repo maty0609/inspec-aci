@@ -3,6 +3,7 @@ describe aci_application_epg(name:'tf-test',tenant:'tf-test-client',profile:'tf-
   it { should be_floodEncapEnabled }
   it { should be_intraEpgIsolationEnabled }
   it { should_not be_epgShutdown }
-  its('providedTo') { should include 'tf-test' }
-  its('comsumedBy') { should include 'tf-test' }
+  its ('provided_to') { should include 'tf-test' }
+  its ('comsumed_by') { should include 'tf-test' }
+  its ('bridge_domain') { should cmp 'tf-test' }
 end

@@ -10,13 +10,14 @@ platform: aci
 Ensure that an `aci_application_epg` exists
 
 ```
-describe aci_application_epg(name:'epg-name',tenant:'aci-tenant-name',profile:'tf-test') do
+describe aci_application_epg(name:'tf-test',tenant:'tf-test-client',profile:'tf-test') do
   it { should exist }
   it { should be_floodEncapEnabled }
   it { should be_intraEpgIsolationEnabled }
   it { should_not be_epgShutdown }
-  its('providedTo') { should include 'tf-test' }
-  its('comsumedBy') { should include 'tf-test' }
+  its('provided_to') { should include 'tf-test' }
+  its('comsumed_by') { should include 'tf-test' }
+  its('bridge_domain') { should cmp 'tf-test' }
 end
 ```
 
@@ -24,8 +25,12 @@ end
 
 |Property                         | Description|
 | ---                             | --- |
-| providedTo                       | EPG provides resources to defined contract |
-| comsumedBy                      | EPG consumes resources from defined contract |
+| name                       | EPG name |
+| tenant                       | Tenant name |
+| profile                       | Application Profile name |
+| provided_to                       | EPG provides resources to defined contract |
+| comsumed_by                      | EPG consumes resources from defined contract |
+| bridge_domain                      | Assigned Bridge Domain to EPG |
 
 
 ## Examples
@@ -33,9 +38,17 @@ end
 ##### Ensure EPG provides resources to EPG tf-test
 ```
 describe aci_application_epg(name:'epg-name',tenant:'aci-tenant-name',profile:'tf-test') do
-  its('providedTo') { should include 'tf-test' }
+  its('provided_to') { should include 'tf-test' }
 end
 ```
+
+##### Ensure EPG is assigned to the right Bridge Domain
+```
+describe aci_application_epg(name:'tf-test',tenant:'tf-test-client',profile:'tf-test') do
+  its('bridge_domain') { should cmp 'tf-test' }
+end
+```
+
 
 ## Matchers
 
