@@ -24,5 +24,6 @@ lib = File.expand_path('/usr/local/rvm/gems/ruby-2.7.2/gems/websocket-1.2.9/lib'
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require_relative 'plugin.rb'
+require_relative '../../libraries/aci_application_epg.rb'
 require_relative '../../libraries/aci_contract.rb'
 require_relative '../../libraries/aci_subject.rb'
