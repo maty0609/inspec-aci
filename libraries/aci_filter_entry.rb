@@ -17,7 +17,7 @@ class AciFilterEntry < Inspec.resource(1)
     end
     "
 
-  attr_reader :name, :tenant, :response, :username, :aci, :password, :url, :configIssue, :filter
+  attr_reader :name, :tenant, :response, :username, :aci, :password, :url, :filter
 
   def initialize(params)
     @name   = params[:name]
@@ -28,7 +28,6 @@ class AciFilterEntry < Inspec.resource(1)
     @password = ENV['ACI_PASSWORD']
     @aci = ACIrb::RestClient.new(url: url, user: username, password: password)
     @response = aci.lookupByDn('uni/tn-'+tenant+'/flt-'+filter+'/e-'+name, subtree: 'full')
-    puts response
   end
 
   def stateful?
@@ -70,6 +69,7 @@ class AciFilterEntry < Inspec.resource(1)
        return response.dFromPort
     end
   end
+
   def dToPort
     if response.nil? == true
        return nil
@@ -85,7 +85,7 @@ class AciFilterEntry < Inspec.resource(1)
        return response.dFromPort
     end
   end
-  
+
   def sToPort
     if response.nil? == true
        return nil
