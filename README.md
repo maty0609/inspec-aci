@@ -17,6 +17,11 @@ This project is still at the beginning. This resource pack is in the early stage
 * ACIrb - Ruby implementation of the Cisco APIC REST API
 * Cisco ACI v3.1 or later
 
+## InSpec Cisco ACI Resource modules
+- [aci_application_epg](doc/resources/aci_application_epg.md)
+- [aci_filter](doc/resources/aci_filter.md)
+- [aci_subject](doc/resources/aci_subject.md)
+
 ## Examples
 
 ```
@@ -40,11 +45,6 @@ export ACI_URL=https://10.10.10.10/
 * https://docs.chef.io/inspec/
 * https://github.com/inspec/inspec
 * https://github.com/datacenter/acirb
-
-
-- [aci_subject](doc/resources/aci_subject.md)
-- [aci_application_epg](doc/resources/aci_application_epg.md)
-
 
 ## Contributing
 
