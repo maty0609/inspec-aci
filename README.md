@@ -20,6 +20,7 @@ This project is still at the beginning. This resource pack is in the early stage
 ## Resource modules
 - [aci_application_epg](doc/resources/aci_application_epg.md)
 - [aci_filter](doc/resources/aci_filter.md)
+- [aci_filter_entry](doc/resources/aci_filter_entry.md)
 - [aci_subject](doc/resources/aci_subject.md)
 
 ## Examples
