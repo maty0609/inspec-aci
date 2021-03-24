@@ -20,7 +20,7 @@ class AciSubject < Inspec.resource(1)
     username = ENV['ACI_USERNAME']
     password = ENV['ACI_PASSWORD']
     aci = ACIrb::RestClient.new(url: url, user: username,password: password)
-    @response = aci.lookupByDn('uni/tn-'+tenant+'/brc-'+contract+'/'+name, subtree: 'full')
+    @response = aci.lookupByDn('uni/tn-'+tenant+'/brc-'+contract+'/subj-'+name, subtree: 'full')
   end
 
   def reversePortFilter?
